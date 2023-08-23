@@ -412,13 +412,16 @@
 /* skill scroll  */
 .skill-wrapper{
     display:flex;
+    z-index: inherit;
 }
 .skill-wrapper ol{
     margin-left:20px;
+    z-index: inherit;
 }
 
 .skill-scroll-img{
     margin-left: 20px;
+    z-index: inherit;
 }
 
 .skills-scroll-wrapper{
@@ -428,6 +431,7 @@
     height:70px;
     align-self: center;
     overflow:hidden;
+    z-index: inherit;
 }
 
 .skills-scroll{
@@ -462,29 +466,28 @@
 /* start of myprojects slide */
 
 .project{
-    cursor: pointer;
-    transition:transform .3s;
+    transition: transform .3s;
 }
 
 .project:hover{
     transform: scale(1.1);
 }
-.project:hover > a{
+.project:hover .links{
     width:100%;
     height:100%;
     background-color: transparent;
+    border:#14BDAD solid 2px;
 }
 
+
 .links{
+    
     color:red;
     position: absolute;
-    z-index: 10;
     text-decoration: none;
     font-size: 20px;
     font-family: Montserrat,sans-serif;
     background-color: transparent;
-    /* width:100%;
-    height: 100%; */
 }
 .grid-container{
     box-sizing: border-box;
@@ -887,3 +890,191 @@
 }
 
 /* End of Profile Card */
+
+
+/* responsive web design */
+
+@media(max-width:1000px){
+    .img-wrapper{
+        height:100px;
+        width:100px;
+    }
+
+    .left p{
+        font-size: 18px;
+    }
+
+    .click-to-view{
+        width:60%;
+        margin:15px 20%;
+    }
+
+    .menu-item{
+        font-size: 15px;
+    }
+
+    .about-me-head{
+        font-size: 20px;
+    }
+
+    .grid-container{
+        height:90%;
+        width:90%;
+        margin: auto auto;
+        
+    }
+    .cert-img{
+        width: 50%;
+    }
+
+    .contact-me-page{
+        width:50%;
+    }
+
+    .page-heading{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:870px){
+    .menu-item{
+        text-align: center;
+    }
+
+    .contact-me-page{
+        width:60%;
+    }
+    .links{
+        font-size: 15px;
+    }
+
+    .skills-scroll-wrapper{
+        width:150px;
+        height:50px;
+    }
+}
+
+
+@media(max-width:630px){
+    .footer{
+        height:100px;
+        flex-direction: column;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+    .left{
+        width:100%;
+        height:20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .upper{
+        width:20%;
+    }
+
+    .img-wrapper{
+        display: none;
+    }
+
+    .right{
+        width:100%;
+    }
+    .menu-item.active{
+        color:#fff;
+        cursor: pointer;
+    }
+    .menu{
+        width:80%;
+    }
+    .menu-list{
+        display: flex;
+        flex-direction: row;
+        border-top:none;
+    }
+    .menu-item{
+        font-size: 15px;
+    }
+
+    .menu-item:hover{
+        color:#fff;
+        cursor: pointer;
+        
+    }
+
+    
+
+    .cert-img{
+        width:90%;
+    }
+
+    .click-to-view{
+        padding: 1px;
+        font-size: 10px;
+        width:100%;
+        margin:10px 0;
+        height: 25px;
+    }
+}
+
+@media(max-width:542px){
+    .left p {
+        font-size: 15px;
+        background:transparent;
+    }
+
+    .contact-me-page{
+        width:90%;
+    }
+
+    .cert-table td{
+        font-size: 12px;
+        font-weight: 400;
+        padding:2px;
+    }
+
+}
+
+@media(max-width:384px){
+    .left p {
+        font-size: 15px;
+        background:transparent;
+    }
+
+    .contact-me-page{
+        width:100%;
+    }
+
+    .menu{
+        width:70%;
+    }
+    .menu-item{
+        font-size: 12px;
+    }
+    .click-to-view a{
+        font-size: 12px;
+    }
+
+    .click-to-view{
+        background: transparent;
+        box-shadow: none;
+    }
+    .click-to-view::after{
+        display: none;
+    }
+    .click-to-view::before{
+        display:none;
+    }
+
+    .links{
+        font-size: 10px;
+    }
+    
+    .certifications-wrapper{
+        padding-left: 2px;
+    }
+
+}
