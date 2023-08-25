@@ -157,3 +157,18 @@ function restore(){
 
 
 document.querySelector(".fa-envelope").addEventListener("click",mail_view)
+
+// scrolling aboutme section
+
+const abt = document.querySelector(".aboutme")
+
+abt.addEventListener("wheel",function(e) {
+    if (e.deltaY>0){
+        abt.scrollTop+=100;
+        e.preventDefault();
+    }
+    else{
+        abt.scrollTop-=100;
+        e.preventDefault();
+    }
+})
