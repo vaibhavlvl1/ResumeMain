@@ -786,7 +786,7 @@
     transform: translateX(-50%);
     opacity: 0;
     transition:opacity 1s;
-    z-index: 6;
+    z-index: -1;
      
 }
 
