@@ -3,6 +3,9 @@
     margin:0;
 }
 
+body{
+    background-color: #000;
+}
 
 /* outline begin */
 
@@ -11,6 +14,8 @@
     height: auto;    /* 100vh original value */
     width:100%;
     background: #000;
+    left:50%;
+    transform: translateX(-50%);
     
     
 }
@@ -41,7 +46,7 @@
     width:100%;
     height:100%;
     margin-left: 13px;
-    box-shadow: #fff 0px 0px 5px 3px;
+    
     transform: rotateY(-130deg);
     transform-style: preserve-3d;
     transform-origin: right;
@@ -334,11 +339,15 @@
 }
 
 .slide{
-    width:100%;
+    width:99%;
     height: 100%;
     position: absolute;
     transition: opacity 1s;
     border-radius: 5px;
+    box-shadow: #fff 0px 0px 5px 3px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
     
 }
 
@@ -346,8 +355,8 @@
     background:linear-gradient(to left ,rgba(0,0,0,.5),rgba(0,0,0,1)), url("img/l1.jpg") center no-repeat;
     background-size: cover;
     opacity: 1;
-    padding :3px;
-    overflow:scroll;
+    padding :3px 8px;
+    overflow:auto;
 }
 
 .myprojects{
@@ -984,17 +993,25 @@
     .right{
         width:100%;
     }
+    .left{
+        height: 15vh;
+        margin-bottom: 10px;
+        width:95%;
+    }
     .menu-item.active{
         color:#fff;
         cursor: pointer;
     }
     .menu{
         width:80%;
+        height: 30%;
+        margin-top: 2px;
     }
     .menu-list{
         display: flex;
         flex-direction: row;
         border-top:none;
+        margin-top: 0;
     }
     .menu-item{
         font-size: 15px;
@@ -1018,6 +1035,19 @@
         width:100%;
         margin:10px 0;
         height: 25px;
+    }
+
+    .slide-wrapper{
+        width:95%;
+    }
+
+    .footer{
+        width:100%;
+        margin-left: 0px;
+    }
+
+    .contact-me-page{
+        width:90%;
     }
 }
 
@@ -1078,4 +1108,29 @@
         padding-left: 2px;
     }
 
+}
+
+@media(max-width:320px){
+    .menu-item{
+        margin-bottom: 2px;
+    }
+    .menu-list{
+        flex-direction: column;
+    }
+
+    .card-wrapper{
+        width:250px;
+        height:500px;
+    }
+    .intro{
+        width:60%;
+    }
+
+    .mail-id{
+        font-size: 15px;
+    }
+
+    .contact-me-details{
+        font-size: 12px;
+    }
 }
