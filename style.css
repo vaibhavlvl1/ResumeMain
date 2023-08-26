@@ -1067,23 +1067,32 @@ body{
         padding:2px;
     }
 
+    .menu-item{
+        font-size: 12px;
+    }
+
 }
 
 @media(max-width:384px){
     .left p {
         font-size: 15px;
         background:transparent;
+        justify-content: space-around;
     }
 
     .contact-me-page{
         width:100%;
     }
 
+    .contact-me-details{
+        font-size: 12px;
+    }
+
     .menu{
         width:70%;
     }
     .menu-item{
-        font-size: 12px;
+        font-size: 10px;
     }
     .click-to-view a{
         font-size: 12px;
